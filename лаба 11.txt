@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	int number;
+	int typeoffigure;
+	int linelength;
+	char texture;
+
+	cout << "\x1b[94m[+] Программа - Геометрические фигуры\n\n";
+	cout << "\x1b[0m[1] Линия\n\n";
+	cout << "\x1b[94m[+] Выберите фигуру: "; cin >> number;
+
+	system("cls");
+
+	cout << "\x1b[94m[+] Фигура: Линия\n\n";
+	cout << "\x1b[0m[1] Горизонтальная\n";
+	cout << "\x1b[0m[2] Вертикальная\n\n";
+	cout << "\x1b[94m[+] Выберите тип: "; cin >> typeoffigure;
+
+	system("cls");
+
+	cout << "\x1b[94m[+] Длина линии: "; cin >> linelength; "\n\n";
+	cout << "\x1b[94m[+] Текстура линии: "; cin >> texture; 
+
+	system("cls");
+
+	if (typeoffigure == 1) {
+		while (linelength != 0) {
+			cout << texture;
+			linelength--;
+		}
+	}
+	else {
+		while (linelength != 0) {
+			cout << texture << endl;
+			linelength--;
+		}
+	}
+
+	int _;
+	cin >> _;
+
+	return 0;
+
+}
